@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Caps | Premium Oyster Mushrooms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for earthy aesthetic */
+        :root {
+            --color-primary: #10B981; /* Emerald Green */
+            --color-secondary: #4F46E5; /* Indigo */
+            --color-text-dark: #1F2937;
+            --color-bg-light: #F9FAFB;
+        }
+        .text-fungi-green { color: var(--color-primary); }
+        .bg-fungi-green { background-color: var(--color-primary); }
+        .hover\:bg-fungi-green-dark:hover { background-color: #059669; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        .section-padding { padding: 4rem 1rem; }
+        
+        /* Video Aspect Ratio for responsiveness */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-color-text-dark">
+
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <a href="#" class="flex items-center space-x-2 text-xl font-bold text-fungi-green">
+                <img src="/home/yadhukrishna-t-m/Desktop/Tooyum/Gemini_Generated_Image_8zttg08zttg08ztt.png" alt="White Caps Logo" class="h-8 w-auto">
+                <span>White Caps</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#mushroom-details" class="text-gray-600 hover:text-fungi-green transition duration-150">Why Oyster?</a>
+                <a href="#products" class="text-gray-600 hover:text-fungi-green transition duration-150">Products</a>
+                <a href="#recipes" class="text-gray-600 hover:text-fungi-green transition duration-150">Recipes</a>
+                <a href="#contact" class="text-gray-600 hover:text-fungi-green transition duration-150">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-fungi-green rounded-md focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#mushroom-details" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Why Oyster?</a>
+            <a href="#products" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Products</a>
+            <a href="#recipes" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Recipes</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+        </div>
+    </header>
+    
+    <section class="bg-gray-100 section-padding pt-16 sm:pt-24 lg:pt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
+                The Freshest <span class="text-fungi-green">Oyster Mushrooms</span>, Delivered.
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-500">
+                Grown with care, packed with nutrients, and perfect for your next culinary creation. Taste the difference quality makes.
+            </p>
+            <div class="mt-10 flex justify-center space-x-3">
+                <a href="#products" class="px-8 py-3 text-lg font-medium rounded-xl text-white bg-fungi-green hover:bg-fungi-green-dark transition duration-300 shadow-lg shadow-green-200/50">
+                    Order Now
+                </a>
+                <a href="#recipes" class="px-8 py-3 text-lg font-medium rounded-xl text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition duration-300 shadow-md">
+                    Explore Recipes
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="mushroom-details" class="bg-white section-padding border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">The Power of Oyster Mushrooms</h2>
+            <p class="text-center text-xl text-gray-600 mb-12 max-w-4xl mx-auto">
+                Discover the amazing flavor, powerful nutrients, and culinary versatility that make our Oyster Mushrooms a customer favorite.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-xl bg-gray-50 shadow-md">
+                    <i data-lucide="sparkles" class="w-8 h-8 text-fungi-green mx-auto mb-3"></i>
+                    <h3 class="text-xl font-semibold mb-2">Delicate Flavor & Texture</h3>
+                    <p class="text-gray-600">
+                        Oyster mushrooms offer a subtle, **delicate, and slightly sweet flavor** that won't overpower your dish. Their **velvety, yet firm texture** holds up beautifully in stir-fries, stews, and when crisped up in the oven.
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl bg-gray-50 shadow-md">
+                    <i data-lucide="nut" class="w-8 h-8 text-fungi-green mx-auto mb-3"></i>
+                    <h3 class="text-xl font-semibold mb-2">Packed with Nutrients</h3>
+                    <p class="text-gray-600">
+                        Naturally **low in calories and fat**, they are an excellent source of **plant-based protein, B vitamins (like Niacin and Riboflavin)**, and essential minerals. A healthy, whole-food addition to any diet.
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl bg-gray-50 shadow-md">
+                    <i data-lucide="chef-hat" class="w-8 h-8 text-fungi-green mx-auto mb-3"></i>
+                    <h3 class="text-xl font-semibold mb-2">Chef-Approved Versatility</h3>
+                    <p class="text-gray-600">
+                        Whether you are making vegan "pulled pork," savory tacos, or gourmet pasta, Oyster Mushrooms are incredibly versatile. They cook quickly, making meal prep simple and delicious.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="bg-gray-50 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Premium Selection</h2>
+
+            <div class="flex justify-center mx-auto">
+                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 w-full max-w-sm">
+                    <div class="h-40 bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="/home/yadhukrishna-t-m/Desktop/Tooyum/360_F_317100318_mTQy5MB2toTXexXEGmiwZIyef2uEYAOA.webp" alt="Fresh Oyster Mushrooms" class="object-cover w-full h-full">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900">Fresh Oyster Mushrooms</h3>
+                    <p class="mt-2 text-gray-600">Harvested daily for peak freshness. Perfect for sautéing, grilling, or adding to soups.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-3xl font-bold text-fungi-green">50RS <span class="text-base font-normal text-gray-500">/ 100gms</span></span>
+                        <button onclick="openOrderModal('Fresh Oyster Mushrooms', 50.00, '100gms')" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">
+                            Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recipes" class="bg-gray-100 section-padding">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-4">Mushroom Recipe Video Library</h2>
+            <p class="text-center text-lg text-gray-600 mb-12">Learn how to transform simple Oyster Mushrooms into gourmet dishes.</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <div class="bg-white rounded-xl shadow-lg p-4">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/vXz_m4x-f1s?autoplay=0&mute=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="mt-4 text-xl font-semibold text-gray-900">Crispy Fried Oyster Mushroom "Wings"</h3>
+                    <p class="mt-1 text-gray-600">A perfect meatless alternative for a crowd-pleasing appetizer.</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-4">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/vXz_m4x-f1s?autoplay=0&mute=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="mt-4 text-xl font-semibold text-gray-900">One-Pan Creamy Mushroom Pasta</h3>
+                    <p class="mt-1 text-gray-600">Quick, easy, and satisfying dinner ready in under 30 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-white section-padding border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold mb-4 text-gray-900">Connect with Our Sales Team</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    Call or message any of our representatives for immediate orders or wholesale inquiries.
+                </p>
+                
+                <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-fungi-green mb-1">YadhuKrishna T M</h3>
+                        <a href="tel:+919778256341" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> +91 9778256341</a>
+                        <a href="https://wa.me/919778256341" target="_blank" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition mt-1"><i data-lucide="message-square" class="w-4 h-4 mr-2"></i> DM on WhatsApp</a>
+                    </div>
+                    
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-fungi-green mb-1">Adithyan K J</h3>
+                        <a href="tel:+917510367691" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> +91 7510367691</a>
+                        <a href="https://wa.me/917510367691" target="_blank" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition mt-1"><i data-lucide="message-square" class="w-4 h-4 mr-2"></i> DM on WhatsApp</a>
+                    </div>
+
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-fungi-green mb-1">Siddharth</h3>
+                        <a href="tel:+918590685527" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> +91 8590685527</a>
+                        <a href="https://wa.me/918590685527" target="_blank" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition mt-1"><i data-lucide="message-square" class="w-4 h-4 mr-2"></i> DM on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="text-3xl font-bold mb-4 text-center">Or Send Us a Message</h2>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="max-w-xl mx-auto space-y-4">
+                <input type="hidden" name="access_key" value="8717869c-78d3-4f72-ae9e-d681f668a249">
+                
+                <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-fungi-green focus:border-fungi-green transition duration-200 shadow-sm" name="name">
+                <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-fungi-green focus:border-fungi-green transition duration-200 shadow-sm" name="email">
+                <textarea placeholder="Your Message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-fungi-green focus:border-fungi-green transition duration-200 shadow-sm" name="message"></textarea>
+                
+                <input type="hidden" name="redirect" value="YOUR_SITE_URL/index.html?contact=success">
+
+                <button type="submit" class="w-full px-4 py-3 bg-fungi-green text-white font-semibold rounded-lg hover:bg-fungi-green-dark transition duration-300 shadow-lg">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+            <p>&copy; 2025 FungiFresh Farms. All rights reserved.</p>
+            <div class="flex justify-center sm:justify-end space-x-4 mt-4 sm:mt-0">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-200"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-200"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-200"><i data-lucide="mail" class="w-6 h-6"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="order-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-[99]">
+        <div class="bg-white p-6 rounded-xl shadow-2xl w-full max-w-sm m-4 transform transition-all duration-300 scale-100">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold text-gray-900">Place Your Order</h3>
+                <button onclick="closeOrderModal()" class="text-gray-400 hover:text-gray-600">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <p id="modal-product-name" class="text-lg font-semibold mb-2"></p>
+            <p id="modal-product-price" class="text-xl font-bold text-fungi-green mb-4"></p>
+
+            <form id="modal-order-form" class="space-y-4">
+                <div>
+                    <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity (units: <span id="unit-label"></span>)</label>
+                    <input type="number" id="quantity" value="1" min="1" required class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                    <input type="text" id="name" required placeholder="Your Name" class="mt-1 w-full px-3 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                
+                <button type="submit" class="w-full px-4 py-3 bg-fungi-green text-white font-semibold rounded-lg hover:bg-fungi-green-dark transition duration-300 shadow-md">
+                    Order via WhatsApp
+                </button>
+            </form>
+            <div id="order-message" class="mt-4 text-center p-3 rounded-lg hidden"></div>
+        </div>
+    </div>
+    
+    <script type="module">
+        // ALL FIREBASE CODE HAS BEEN REMOVED
+        
+        // --- DOM ELEMENTS ---
+        const orderModal = document.getElementById('order-modal');
+        const modalProductName = document.getElementById('modal-product-name');
+        const modalProductPrice = document.getElementById('modal-product-price');
+        const unitLabel = document.getElementById('unit-label');
+        const orderForm = document.getElementById('modal-order-form');
+        
+        let currentProduct = {}; // To hold the details of the product being ordered
+
+        // --- UI UTILITIES ---
+
+        // 1. Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 2. Order Modal Logic (Updated for WhatsApp)
+        // price is now the actual RS value, unit is '100gms' or 'lb'
+        window.openOrderModal = function(name, price, unit) {
+            currentProduct = { name, price, unit };
+            modalProductName.textContent = name;
+            modalProductPrice.textContent = `₹ ${price.toFixed(2)} / ${unit}`;
+            unitLabel.textContent = unit;
+            
+            orderModal.classList.remove('hidden');
+            orderModal.classList.add('flex');
+            orderForm.reset(); 
+            document.getElementById('quantity').value = 1; 
+        }
+
+        window.closeOrderModal = function() {
+            orderModal.classList.add('hidden');
+            orderModal.classList.remove('flex');
+        }
+        
+        // 3. WhatsApp Form Submission Handler
+        if (orderForm) {
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // IMPORTANT: Replace this with your actual sales WhatsApp number (YadhuKrishna's number from the contact section)
+                const WHATSAPP_NUMBER = '919778256341'; 
+                
+                const quantity = parseInt(document.getElementById('quantity').value);
+                const customerName = document.getElementById('name').value;
+                const total = parseFloat((currentProduct.price * quantity).toFixed(2));
+                
+                const message = `Hello, I'd like to place an order for White Caps mushrooms!
+
+*Customer:* ${customerName}
+*Product:* ${currentProduct.name}
+*Quantity:* ${quantity} ${currentProduct.unit}
+*Price per Unit:* ₹ ${currentProduct.price.toFixed(2)}
+*Estimated Total:* ₹ ${total.toFixed(2)}
+
+Please confirm the order and delivery details.`;
+
+                const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+                
+                // Close modal and open WhatsApp
+                closeOrderModal();
+                window.open(whatsappUrl, '_blank');
+            });
+        }
+
+        // 4. Custom Alert/Message Box (Replaced Firebase alert)
+        window.alertUser = function(title, message, type) {
+            // This is now just a visual alert since we removed the actual Firebase dependency
+            console.log(`[${type.toUpperCase()}] ${title}: ${message}`);
+            // You can implement a simple custom DOM notification here if needed, but for now, we rely on Web3Forms' redirect success message.
+        }
+
+        // Initialize Lucide Icons after the DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            
+            // Check for success message from Web3Forms redirect
+            const params = new URLSearchParams(window.location.search);
+            if (params.get('contact') === 'success') {
+                window.alertUser('Message Sent!', 'Your query has been successfully sent via email!', 'success');
+                // Clean the URL hash
+                history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+            }
+        });
+    </script>
+</body>
+</html>
