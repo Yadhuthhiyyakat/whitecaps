@@ -38,21 +38,27 @@
             height: 100%;
             border: 0;
         }
+
+        /* NEW: Utility class for background image sections */
+        .bg-cover-slot {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body class="font-inter bg-gray-50 text-color-text-dark">
 
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+    <header class="sticky top-0 z-[60] bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 relative z-[60]">
             <a href="#" class="flex items-center space-x-2 text-xl font-bold text-fungi-green">
-                <img src="Gemini_Generated_Image_8zttg08zttg08ztt.png" alt="White Caps Logo" class="h-8 w-auto">
-                <span>White Caps</span>
+                <span class="text-2xl">White Caps</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#mushroom-details" class="text-gray-600 hover:text-fungi-green transition duration-150">Why Oyster?</a>
-                <a href="#products" class="text-gray-600 hover:text-fungi-green transition duration-150">Products</a>
-                <a href="#recipes" class="text-gray-600 hover:text-fungi-green transition duration-150">Recipes</a>
-                <a href="#contact" class="text-gray-600 hover:text-fungi-green transition duration-150">Contact</a>
+                <a href="#mushroom-details" class="text-gray-600 hover:text-fungi-green transition duration-150 font-medium">Why Oyster?</a>
+                <a href="#products" class="text-gray-600 hover:text-fungi-green transition duration-150 font-medium">Products</a>
+                <a href="#recipes" class="text-gray-600 hover:text-fungi-green transition duration-150 font-medium">Recipes</a>
+                <a href="#contact" class="text-gray-600 hover:text-fungi-green transition duration-150 font-medium">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-fungi-green rounded-md focus:outline-none">
                 <i data-lucide="menu" class="w-6 h-6"></i>
@@ -66,51 +72,71 @@
         </div>
     </header>
     
-    <section class="bg-gray-100 section-padding pt-16 sm:pt-24 lg:pt-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
+    <section class="bg-cover-slot py-4 pt-4 sm:pt-4 lg:pt-4 relative" 
+        style="
+            background-image: url('Close-up-of-pearl-oyster-mushrooms-1024x683.jpg');
+            background-color: #F3F4F6;
+            background-size: 60%; 
+            background-repeat: no-repeat;
+            background-position: center center;
+        ">
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-900 p-4 rounded-xl **bg-transparent shadow-none**">
+            
+            <div class="mx-auto mb-4 w-32 h-32 rounded-full bg-fungi-green flex items-center justify-center overflow-hidden shadow-xl ring-6 ring-white transform transition duration-500 hover:scale-105">
+                <img src="Gemini_Generated_Image_8zttg08zttg08ztt.png" alt="White Caps Logo" >
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
                 The Freshest <span class="text-fungi-green">Oyster Mushrooms</span>, Delivered.
             </h1>
-            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-500">
+            <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
                 Grown with care, packed with nutrients, and perfect for your next culinary creation. Taste the difference quality makes.
             </p>
-            <div class="mt-10 flex justify-center space-x-3">
-                <a href="#products" class="px-8 py-3 text-lg font-medium rounded-xl text-white bg-fungi-green hover:bg-fungi-green-dark transition duration-300 shadow-lg shadow-green-200/50">
-                    Order Now
+            <div class="mt-6 flex justify-center space-x-4">
+                <a href="#products" class="px-8 py-2 text-base font-bold rounded-xl text-white bg-fungi-green hover:bg-fungi-green-dark transition duration-300 shadow-xl shadow-green-400/50 uppercase tracking-wider">
+                    Order Fresh Caps
                 </a>
-                <a href="#recipes" class="px-8 py-3 text-lg font-medium rounded-xl text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 transition duration-300 shadow-md">
-                    Explore Recipes
+                <a href="#recipes" class="px-8 py-2 text-base font-medium rounded-xl text-gray-700 bg-white border border-gray-300 hover:bg-gray-100 transition duration-300 shadow-md">
+                    Watch Recipes
                 </a>
             </div>
         </div>
     </section>
-
-    <section id="mushroom-details" class="bg-white section-padding border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="mushroom-details" class="bg-cover-slot section-padding border-b border-gray-100" 
+        style="
+            /* --- BACKGROUND IMAGE SLOT 2 (DETAILS) --- */
+            /* Replace the URL below with your image path (e.g., 'url(/images/close-up-fungi.jpg)') */
+            background-image: url('');
+            /* If using a light image, consider adding a dark background fallback */
+            background-color: #FFFFFF;
+        ">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 p-6 rounded-xl bg-white/80 backdrop-blur-sm shadow-2xl">
             <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">The Power of Oyster Mushrooms</h2>
             <p class="text-center text-xl text-gray-600 mb-12 max-w-4xl mx-auto">
                 Discover the amazing flavor, powerful nutrients, and culinary versatility that make our Oyster Mushrooms a customer favorite.
             </p>
 
             <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 rounded-xl bg-gray-50 shadow-md">
+                <div class="p-6 rounded-xl bg-gray-50/70 shadow-lg border border-gray-100 transform hover:translate-y-[-4px] transition duration-300">
                     <i data-lucide="sparkles" class="w-8 h-8 text-fungi-green mx-auto mb-3"></i>
                     <h3 class="text-xl font-semibold mb-2">Delicate Flavor & Texture</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                         Oyster mushrooms offer a subtle, **delicate, and slightly sweet flavor** that won't overpower your dish. Their **velvety, yet firm texture** holds up beautifully in stir-fries, stews, and when crisped up in the oven.
                     </p>
                 </div>
-                <div class="p-6 rounded-xl bg-gray-50 shadow-md">
+                <div class="p-6 rounded-xl bg-gray-50/70 shadow-lg border border-gray-100 transform hover:translate-y-[-4px] transition duration-300">
                     <i data-lucide="nut" class="w-8 h-8 text-fungi-green mx-auto mb-3"></i>
                     <h3 class="text-xl font-semibold mb-2">Packed with Nutrients</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                         Naturally **low in calories and fat**, they are an excellent source of **plant-based protein, B vitamins (like Niacin and Riboflavin)**, and essential minerals. A healthy, whole-food addition to any diet.
                     </p>
                 </div>
-                <div class="p-6 rounded-xl bg-gray-50 shadow-md">
+                <div class="p-6 rounded-xl bg-gray-50/70 shadow-lg border border-gray-100 transform hover:translate-y-[-4px] transition duration-300">
                     <i data-lucide="chef-hat" class="w-8 h-8 text-fungi-green mx-auto mb-3"></i>
                     <h3 class="text-xl font-semibold mb-2">Chef-Approved Versatility</h3>
-                    <p class="text-gray-600">
+                    <p class="text-gray-700">
                         Whether you are making vegan "pulled pork," savory tacos, or gourmet pasta, Oyster Mushrooms are incredibly versatile. They cook quickly, making meal prep simple and delicious.
                     </p>
                 </div>
@@ -118,21 +144,58 @@
         </div>
     </section>
 
-    <section id="products" class="bg-gray-50 section-padding">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="products" class="bg-cover-slot section-padding" 
+        style="
+            /* --- BACKGROUND IMAGE SLOT 3 (PRODUCTS) --- */
+            /* Replace the URL below with your image path (e.g., 'url(/images/kitchen-counter.jpg)') */
+            background-image: url('');
+            /* If using a dark image, consider adding a light background fallback */
+            background-color: #F9FAFB;
+        ">
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 p-6 rounded-xl bg-black/40 text-white">
             <h2 class="text-3xl font-bold text-center mb-12">Our Premium Selection</h2>
 
-            <div class="flex justify-center mx-auto">
-                <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 w-full max-w-sm">
-                    <div class="h-40 bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                        <img src="WhatsApp Image 2025-11-02 at 17.16.26.jpeg" alt="Fresh Oyster Mushrooms" class="object-cover w-full h-full">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-white text-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="/home/yadhukrishna-t-m/Desktop/Tooyum/360_F_317100318_mTQy5MB2toTXexXEGmiwZIyef2uEYAOA.webp" alt="Fresh Oyster Mushrooms" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
                     </div>
-                    <h3 class="text-2xl font-semibold text-gray-900">Fresh Oyster Mushrooms</h3>
+                    <h3 class="text-2xl font-semibold">Fresh Oyster Mushrooms</h3>
                     <p class="mt-2 text-gray-600">Harvested daily for peak freshness. Perfect for sautéing, grilling, or adding to soups.</p>
                     <div class="mt-4 flex justify-between items-center">
                         <span class="text-3xl font-bold text-fungi-green">50RS <span class="text-base font-normal text-gray-500">/ 100gms</span></span>
                         <button onclick="openOrderModal('Fresh Oyster Mushrooms', 50.00, '100gms')" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">
-                            Order
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1627582312217-1f1481b2e6a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Dried Oyster Flakes" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-semibold">Dried Oyster Flakes</h3>
+                    <p class="mt-2 text-gray-600">Intensely flavored and shelf-stable. Ideal for broth, seasoning, or rehydrating.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-3xl font-bold text-fungi-green">150RS <span class="text-base font-normal text-gray-500">/ 50gms</span></span>
+                        <button onclick="openOrderModal('Dried Oyster Flakes', 150.00, '50gms')" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white text-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594917639572-c216262b9f85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Oyster Mushroom Grow Kit" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="text-2xl font-semibold">Mushroom Grow Kit</h3>
+                    <p class="mt-2 text-gray-600">Grow your own fresh oyster mushrooms at home! Fun and easy for beginners.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-3xl font-bold text-fungi-green">450RS <span class="text-base font-normal text-gray-500">/ Kit</span></span>
+                        <button onclick="openOrderModal('Mushroom Grow Kit', 450.00, 'Kit')" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">
+                            Order Now
                         </button>
                     </div>
                 </div>
@@ -147,7 +210,7 @@
 
             <div class="grid md:grid-cols-2 gap-8">
 
-                <div class="bg-white rounded-xl shadow-lg p-4">
+                <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.01] transition duration-300">
                     <div class="video-container">
                         <iframe 
                             src="https://www.youtube.com/embed/vXz_m4x-f1s?autoplay=0&mute=1" 
@@ -160,7 +223,7 @@
                     <p class="mt-1 text-gray-600">A perfect meatless alternative for a crowd-pleasing appetizer.</p>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-lg p-4">
+                <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.01] transition duration-300">
                     <div class="video-container">
                         <iframe 
                             src="https://www.youtube.com/embed/vXz_m4x-f1s?autoplay=0&mute=1" 
@@ -186,19 +249,19 @@
                 </p>
                 
                 <div class="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300">
                         <h3 class="text-xl font-semibold text-fungi-green mb-1">YadhuKrishna T M</h3>
                         <a href="tel:+919778256341" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> +91 9778256341</a>
                         <a href="https://wa.me/919778256341" target="_blank" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition mt-1"><i data-lucide="message-square" class="w-4 h-4 mr-2"></i> DM on WhatsApp</a>
                     </div>
                     
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300">
                         <h3 class="text-xl font-semibold text-fungi-green mb-1">Adithyan K J</h3>
                         <a href="tel:+917510367691" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> +91 7510367691</a>
                         <a href="https://wa.me/917510367691" target="_blank" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition mt-1"><i data-lucide="message-square" class="w-4 h-4 mr-2"></i> DM on WhatsApp</a>
                     </div>
 
-                    <div class="p-6 bg-gray-50 rounded-xl shadow-md">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition duration-300">
                         <h3 class="text-xl font-semibold text-fungi-green mb-1">Siddharth</h3>
                         <a href="tel:+918590685527" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition"><i data-lucide="phone" class="w-4 h-4 mr-2"></i> +91 8590685527</a>
                         <a href="https://wa.me/918590685527" target="_blank" class="flex items-center justify-center text-gray-700 hover:text-fungi-green transition mt-1"><i data-lucide="message-square" class="w-4 h-4 mr-2"></i> DM on WhatsApp</a>
@@ -293,8 +356,8 @@
             
             orderModal.classList.remove('hidden');
             orderModal.classList.add('flex');
-            orderForm.reset(); 
-            document.getElementById('quantity').value = 1; 
+            orderForm.reset();  
+            document.getElementById('quantity').value = 1;  
         }
 
         window.closeOrderModal = function() {
