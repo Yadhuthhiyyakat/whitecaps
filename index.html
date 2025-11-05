@@ -30,13 +30,18 @@
             border-radius: 0.5rem;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        .video-container iframe {
+        
+        /* --- MODIFIED CSS RULE --- */
+        /* This now styles both iframes AND video tags */
+        .video-container iframe,
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             border: 0;
+            object-fit: cover; /* Ensures video covers the container nicely */
         }
 
         /* NEW: Utility class for background image sections */
@@ -72,21 +77,15 @@
         </div>
     </header>
     
-    <section class="bg-cover-slot **py-16 sm:py-20** relative" 
+    <section class="bg-cover-slot py-16 sm:py-20 relative" 
     style="
-        /* Make sure this path is correct (e.g., 'images/Close-up-of-pearl-oyster-mushrooms-1024x683.jpg') */
         background-image: url('Close-up-of-pearl-oyster-mushrooms-1024x683.jpg');
         background-color: #F3F4F6;
-        /* REMOVED: background-size: 60%; 
-           REMOVED: background-repeat: no-repeat;
-           REMOVED: background-position: center center;
-           (The .bg-cover-slot class in your <style> tag already handles this!)
-        */
     ">
     
     <div class="absolute inset-0 bg-black/50 z-0"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:py-8 text-center **text-white** p-4 rounded-xl">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:py-8 text-center text-white p-4 rounded-xl">
         
         <div class="mx-auto mb-4 w-32 h-32 rounded-full bg-fungi-green flex items-center justify-center overflow-hidden shadow-xl ring-6 ring-white transform transition duration-500 hover:scale-105">
             <img src="Gemini_Generated_Image_8zttg08zttg08ztt.png" alt="White Caps Logo">
@@ -110,10 +109,7 @@
 </section>
     <section id="mushroom-details" class="bg-cover-slot section-padding border-b border-gray-100" 
         style="
-            /* --- BACKGROUND IMAGE SLOT 2 (DETAILS) --- */
-            /* Replace the URL below with your image path (e.g., 'url(/images/close-up-fungi.jpg)') */
             background-image: url('');
-            /* If using a light image, consider adding a dark background fallback */
             background-color: #FFFFFF;
         ">
         
@@ -151,10 +147,7 @@
 
     <section id="products" class="bg-cover-slot section-padding" 
     style="
-        /* --- BACKGROUND IMAGE SLOT 3 (PRODUCTS) --- */
-        /* Replace the URL below with your image path (e.g., 'url(/images/kitchen-counter.jpg)') */
         background-image: url('');
-        /* If using a dark image, consider adding a light background fallback */
         background-color: #F9FAFB;
     ">
     
@@ -163,14 +156,14 @@
 
         <div class="flex justify-center">
             
-            <div class="bg-white text-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 **w-full max-w-md**">
+            <div class="bg-white text-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 w-full max-w-md">
                 <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center mb-4 overflow-hidden">
-                    <img src="360_F_317100318_mTQy5MB2toTXexXEGmiwZIyef2uEYAOA.webp" alt="Fresh Oyster Mushrooms" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
+                    <img src="/home/yadhukrishna-t-m/Desktop/Tooyum/360_F_317100318_mTQy5MB2toTXexXEGmiwZIyef2uEYAOA.webp" alt="Fresh Oyster Mushrooms" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
                 </div>
                 <h3 class="text-2xl font-semibold">Fresh Oyster Mushrooms</h3>
                 <p class="mt-2 text-gray-600">Harvested daily for peak freshness. Perfect for sautéing, grilling, or adding to soups.</p>
                 <div class="mt-4 flex justify-between items-center">
-                    <span class="text-3xl font-bold text-fungi-green">60RS <span class="text-base font-normal text-gray-500">/ 100gms</span></span>
+                    <span class="text-3xl font-bold text-fungi-green">50RS <span class="text-base font-normal text-gray-500">/ 100gms</span></span>
                     <button onclick="openOrderModal('Fresh Oyster Mushrooms', 60.00, '100gms')" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md">
                         Order Now
                     </button>
@@ -190,12 +183,10 @@
 
                 <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.01] transition duration-300">
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/vXz_m4x-f1s?autoplay=0&mute=1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <video controls loop muted playsinline>
+                            <source src="/home/yadhukrishna-t-m/Downloads/Telegram Desktop/Young.Sheldon.S01E21.720p.BluRay.x264-GalaxyTV.mkv" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <h3 class="mt-4 text-xl font-semibold text-gray-900">Crispy Fried Oyster Mushroom "Wings"</h3>
                     <p class="mt-1 text-gray-600">A perfect meatless alternative for a crowd-pleasing appetizer.</p>
@@ -203,12 +194,10 @@
 
                 <div class="bg-white rounded-xl shadow-lg p-4 transform hover:scale-[1.01] transition duration-300">
                     <div class="video-container">
-                        <iframe 
-                            src="https://www.youtube.com/embed/vXz_m4x-f1s?autoplay=0&mute=1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <video controls loop muted playsinline>
+                            <source src="videos/recipe-pasta.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <h3 class="mt-4 text-xl font-semibold text-gray-900">One-Pan Creamy Mushroom Pasta</h3>
                     <p class="mt-1 text-gray-600">Quick, easy, and satisfying dinner ready in under 30 minutes.</p>
@@ -216,7 +205,6 @@
             </div>
         </div>
     </section>
-
     <section id="contact" class="bg-white section-padding border-t border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
@@ -306,7 +294,7 @@
     </div>
     
     <script type="module">
-        // ALL FIREBASE CODE HAS BEEN REMOVED
+        // ... (Your script remains exactly the same) ...
         
         // --- DOM ELEMENTS ---
         const orderModal = document.getElementById('order-modal');
